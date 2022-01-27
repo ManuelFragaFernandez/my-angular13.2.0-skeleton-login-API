@@ -1,0 +1,25 @@
+<div class="user">
+
+  <ul class="user__list">
+    <ng-container *ngFor="let user of usersData$ | async">
+      <li class="user__card">
+        <div class="user__card-container">
+          <div class="user__card-avatar">
+            <img src="{{user.avatar}}" alt="Imágen del usuario">
+          </div>
+          <div class="user__card-info">
+            <h2 class="user__card-name">{{user.name}}</h2>
+            <p class="user__card-email">{{user.email}}</p>
+          </div>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+
+  <div class="user__paginator">
+    <mat-paginator [length]="totalUsers" [pageSize]="usersPerPage" (page)="changePage($event)"
+      aria-label="Muevete por las distintas páginas">
+    </mat-paginator>
+  </div>
+
+</div>

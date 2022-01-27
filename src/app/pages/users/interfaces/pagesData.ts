@@ -1,0 +1,5 @@
+export interface pagesData {
+  page: number;
+  per_page: number;
+  total: number;
+}

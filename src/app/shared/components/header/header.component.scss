@@ -1,0 +1,16 @@
+.header {
+  min-height: 68px;
+  background-color: #3f51b5;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__title {
+    color: #fff;
+    margin: 0;
+  }
+}
+
+.space {
+  flex: 1 1 auto;
+}
